@@ -1,7 +1,7 @@
-import 'package:figma_to_flutter/signUp_Page.dart';
 import 'package:flutter/material.dart';
+import 'package:figma_to_flutter/onboarding/signIn_Page.dart';
 
-class SignInPage extends StatelessWidget {
+class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,19 +10,20 @@ class SignInPage extends StatelessWidget {
         leading: BackButton(color: Colors.black),
         shadowColor: Colors.transparent, // Set the back button color to black
       ),
+      //body
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //title Text
             Text(
-              'Sign in now',
+              'Sign up now',
               style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700),
             ),
             SizedBox(height: 20),
             //discription
             Text(
-              'Please sign in to continue our app',
+              'Please fill the details and create account',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
               textAlign: TextAlign.center,
             ),
@@ -44,16 +45,24 @@ class SignInPage extends StatelessWidget {
                   TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      hintText: 'password',
+                      hintText: 'email',
                     ),
                   ),
                   SizedBox(height: 20),
+                  //textBox3
+                  TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'password',
+                    ),
+                  ),
+                  SizedBox(height: 15),
                   //forgot Password link
                   Padding(
-                    padding: EdgeInsets.all(12),
+                    padding: EdgeInsets.all(10),
                     child: Text(
-                      "Forgot Password?",
-                      style: TextStyle(color: Colors.blueAccent, fontSize: 15),
+                      "Password must be 8 character",
+                      style: TextStyle(fontSize: 15),
                     ),
                   ),
                   //Sign in button
@@ -64,7 +73,7 @@ class SignInPage extends StatelessWidget {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      child: Text("Sign in"),
+                      child: Text("Sign up"),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -72,9 +81,8 @@ class SignInPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Don’t have an account?",
+                      Text("Already have an account? ",
                           style: TextStyle(fontSize: 17)),
-                      //textbutton works as link
                       TextButton(
                         style: TextButton.styleFrom(
                           textStyle:
@@ -84,10 +92,10 @@ class SignInPage extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (c) => SignUpPage(),
+                                builder: (c) => SignInPage(),
                               ));
                         },
-                        child: Text("Sign up"),
+                        child: Text("Sign in"),
                       ),
                     ],
                   ),
@@ -110,16 +118,3 @@ class SignInPage extends StatelessWidget {
     );
   }
 }
-
-//  return Scaffold(
-//       body: Center(
-//         child: ElevatedButton(
-//           child: Text("Go to Home Screen"),
-//           onPressed: () {
-//             Navigator.pop(context);
-//           },
-//         ),
-//       ),
-//     );
-//   }
-// }

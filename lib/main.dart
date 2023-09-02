@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:figma_to_flutter/home.dart';
-import 'package:figma_to_flutter/second_screen.dart';
+import 'package:figma_to_flutter/onboarding/hero.dart';
+import 'package:figma_to_flutter/onboarding/second_Hero.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,8 +17,7 @@ class _MyAppState extends State {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "My Navgation app",
-      home: Home(),
+      home: HeroPage(),
     );
   }
 }

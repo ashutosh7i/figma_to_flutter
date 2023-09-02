@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:figma_to_flutter/second_screen.dart';
+import 'package:figma_to_flutter/onboarding/second_Hero.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class HeroPage extends StatefulWidget {
+  const HeroPage({super.key});
 
   @override
-  _HomeState createState() => _HomeState();
+  _HeroPageState createState() => _HeroPageState();
 }
 
-class _HomeState extends State {
+class _HeroPageState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +38,7 @@ class _HomeState extends State {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (c) => SecondScreen(),
+                      builder: (c) => SecondHero(),
                     ));
               },
             ),
@@ -48,17 +48,3 @@ class _HomeState extends State {
     );
   }
 }
-
-
-
-
-        //     child: ElevatedButton(
-        //   child: Text("Second Screen"),
-        //   onPressed: () {
-        //     Navigator.push(
-        //         context,
-        //         MaterialPageRoute(
-        //           builder: (c) => SecondScreen(),
-        //         ));
-        //   },
-        // )

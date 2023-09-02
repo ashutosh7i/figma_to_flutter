@@ -1,7 +1,8 @@
+import 'package:figma_to_flutter/home/home.dart';
 import 'package:flutter/material.dart';
-import 'package:figma_to_flutter/signIn_Page.dart';
+import 'package:figma_to_flutter/onboarding/signUp_Page.dart';
 
-class SignUpPage extends StatelessWidget {
+class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,13 +17,13 @@ class SignUpPage extends StatelessWidget {
           children: [
             //title Text
             Text(
-              'Sign up now',
+              'Sign in now',
               style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700),
             ),
             SizedBox(height: 20),
             //discription
             Text(
-              'Please fill the details and create account',
+              'Please sign in to continue our app',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
               textAlign: TextAlign.center,
             ),
@@ -44,24 +45,16 @@ class SignUpPage extends StatelessWidget {
                   TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      hintText: 'email',
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  //textBox3
-                  TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
                       hintText: 'password',
                     ),
                   ),
-                  SizedBox(height: 15),
+                  SizedBox(height: 20),
                   //forgot Password link
                   Padding(
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(12),
                     child: Text(
-                      "Password must be 8 character",
-                      style: TextStyle(fontSize: 15),
+                      "Forgot Password?",
+                      style: TextStyle(color: Colors.blueAccent, fontSize: 15),
                     ),
                   ),
                   //Sign in button
@@ -70,9 +63,13 @@ class SignUpPage extends StatelessWidget {
                     width: 270,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (c) => Home(),
+                            ));
                       },
-                      child: Text("Sign up"),
+                      child: Text("Sign in"),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -80,8 +77,9 @@ class SignUpPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Already have an account? ",
+                      Text("Don’t have an account?",
                           style: TextStyle(fontSize: 17)),
+                      //textbutton works as link
                       TextButton(
                         style: TextButton.styleFrom(
                           textStyle:
@@ -91,10 +89,10 @@ class SignUpPage extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (c) => SignInPage(),
+                                builder: (c) => SignUpPage(),
                               ));
                         },
-                        child: Text("Sign in"),
+                        child: Text("Sign up"),
                       ),
                     ],
                   ),
@@ -117,16 +115,3 @@ class SignUpPage extends StatelessWidget {
     );
   }
 }
-
-//  return Scaffold(
-//       body: Center(
-//         child: ElevatedButton(
-//           child: Text("Go to Home Screen"),
-//           onPressed: () {
-//             Navigator.pop(context);
-//           },
-//         ),
-//       ),
-//     );
-//   }
-// }

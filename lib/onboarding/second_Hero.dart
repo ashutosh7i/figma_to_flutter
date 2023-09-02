@@ -1,14 +1,14 @@
-import 'package:figma_to_flutter/signIn_Page.dart';
 import 'package:flutter/material.dart';
+import 'package:figma_to_flutter/onboarding/signIn_Page.dart';
 
-class SecondScreen extends StatefulWidget {
-  const SecondScreen({super.key});
+class SecondHero extends StatefulWidget {
+  const SecondHero({super.key});
 
   @override
-  _SecondScreenState createState() => _SecondScreenState();
+  _SecondHeroState createState() => _SecondHeroState();
 }
 
-class _SecondScreenState extends State {
+class _SecondHeroState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,20 +75,3 @@ class _SecondScreenState extends State {
     );
   }
 }
-
-
-
-
-
-//  return Scaffold(
-//       body: Center(
-//         child: ElevatedButton(
-//           child: Text("Go to Home Screen"),
-//           onPressed: () {
-//             Navigator.pop(context);
-//           },
-//         ),
-//       ),
-//     );
-//   }
-// }
