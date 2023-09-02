@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:figma_to_flutter/feedback/feedback_Page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -35,7 +36,7 @@ class _HomeState extends State<Home> {
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
-          children: const <Widget>[
+          children: <Widget>[
             DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.blue,
@@ -57,8 +58,16 @@ class _HomeState extends State<Home> {
               title: Text('Settings'),
             ),
             ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (c) => FeedBackPage(),
+                  ),
+                );
+              },
               leading: Icon(Icons.message),
-              title: Text('Help'),
+              title: Text('Feedback'),
             ),
           ],
         ),
@@ -242,7 +251,7 @@ class _HomeState extends State<Home> {
                     Spacer(),
                     Container(
                       height: 45,
-                      width: 270,
+                      width: 200,
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.push(
@@ -252,7 +261,7 @@ class _HomeState extends State<Home> {
                             ),
                           );
                         },
-                        child: Text("Sign in"),
+                        child: Text("Start"),
                       ),
                     ),
                   ],
