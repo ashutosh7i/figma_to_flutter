@@ -1,6 +1,7 @@
+import 'package:figma_to_flutter/signUp_Page.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,12 +72,22 @@ class LoginPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Don’t have an account? ",
+                      Text("Don’t have an account?",
                           style: TextStyle(fontSize: 17)),
-                      Text(
-                        "Sign up",
-                        style:
-                            TextStyle(color: Colors.blueAccent, fontSize: 17),
+                      //textbutton works as link
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          textStyle:
+                              TextStyle(color: Colors.blueAccent, fontSize: 17),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (c) => SignUpPage(),
+                              ));
+                        },
+                        child: Text("Sign up"),
                       ),
                     ],
                   ),

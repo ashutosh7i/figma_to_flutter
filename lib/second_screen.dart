@@ -1,4 +1,4 @@
-import 'package:figma_to_flutter/login_page.dart';
+import 'package:figma_to_flutter/signIn_Page.dart';
 import 'package:flutter/material.dart';
 
 class SecondScreen extends StatefulWidget {
@@ -20,8 +20,29 @@ class _SecondScreenState extends State {
       body: Column(
         children: [
           //heroImage
-          // Image(image: AssetImage('assets/hero.png')),
-          SizedBox(height: 80),
+          Container(
+            child: Row(
+              children: [
+                Image(
+                  image: AssetImage('assets/second1.png'),
+                  width: 107,
+                  height: 93,
+                ),
+                SizedBox(width: 120),
+                Image(
+                  image: AssetImage('assets/second2.png'),
+                  width: 150,
+                  height: 114,
+                ),
+              ],
+            ),
+          ),
+          Image(
+            image: AssetImage('assets/second31.png'),
+            width: 295,
+            height: 328,
+          ),
+          SizedBox(height: 0),
           //heroText
           Container(
             child: Text(
@@ -44,7 +65,7 @@ class _SecondScreenState extends State {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (c) => LoginPage(),
+                      builder: (c) => SignInPage(),
                     ));
               },
             ),
