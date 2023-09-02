@@ -1,3 +1,4 @@
+import 'package:figma_to_flutter/organizer/organizer_Page.dart';
 import 'package:flutter/material.dart';
 import 'package:figma_to_flutter/feedback/feedback_Page.dart';
 
@@ -54,8 +55,16 @@ class _HomeState extends State<Home> {
               title: Text('Edit Profile'),
             ),
             ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (c) => OrganizerPage(),
+                  ),
+                );
+              },
+              leading: Icon(Icons.developer_board),
+              title: Text('Organizer Panel'),
             ),
             ListTile(
               onTap: () {
