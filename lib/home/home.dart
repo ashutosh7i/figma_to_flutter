@@ -1,3 +1,4 @@
+import 'package:figma_to_flutter/home/quizDetail.dart';
 import 'package:figma_to_flutter/organizer/organizer_Page.dart';
 import 'package:flutter/material.dart';
 import 'package:figma_to_flutter/feedback/feedback_Page.dart';
@@ -266,7 +267,7 @@ class _HomeState extends State<Home> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (c) => Home(),
+                              builder: (c) => QuizDetails(),
                             ),
                           );
                         },
