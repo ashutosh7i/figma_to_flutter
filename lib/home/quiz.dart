@@ -1,3 +1,4 @@
+import 'package:figma_to_flutter/home/result.dart';
 import 'package:flutter/material.dart';
 
 class Quiz extends StatelessWidget {
@@ -440,7 +441,7 @@ class Quiz extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (c) => Quiz(),
+                                  builder: (c) => Result(),
                                 ),
                               );
                             },
