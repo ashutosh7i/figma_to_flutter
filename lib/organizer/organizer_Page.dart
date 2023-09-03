@@ -232,7 +232,7 @@ class OrganizerPage extends StatelessWidget {
                                     height: 18,
                                   ),
                                   Container(
-                                    height: 40,
+                                    height: 30,
                                     width: 170,
                                     child: ElevatedButton(
                                       onPressed: () {
@@ -255,7 +255,7 @@ class OrganizerPage extends StatelessWidget {
                       Spacer(),
                       Container(
                         height: 45,
-                        width: 200,
+                        width: 250,
                         child: ElevatedButton(
                           onPressed: () {
                             // Navigator.push(
@@ -265,7 +265,7 @@ class OrganizerPage extends StatelessWidget {
                             //   ),
                             // );
                           },
-                          child: Text("Start"),
+                          child: Text("Add Another Question"),
                         ),
                       ),
                     ]))),
