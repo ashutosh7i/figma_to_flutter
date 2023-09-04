@@ -1,3 +1,4 @@
+import 'package:figma_to_flutter/home/home.dart';
 import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
@@ -103,6 +104,150 @@ class Result extends StatelessWidget {
                 ),
               ),
             ),
+            //result summary
+            Padding(
+              padding: const EdgeInsets.all(50.0),
+              child: Column(
+                children: [
+                  //row 1
+                  DefaultTextStyle(
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Correct Answers',
+                        ),
+                        Spacer(),
+                        Text(
+                          'Completion',
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  //Row 2
+                  DefaultTextStyle(
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                    child: Row(
+                      children: [
+                        Text(
+                          '7 Questions',
+                        ),
+                        Spacer(),
+                        Text(
+                          '80%',
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  //Row 3
+                  DefaultTextStyle(
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Skipped',
+                        ),
+                        Spacer(),
+                        Text(
+                          'Incorrect',
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  //row 4
+                  DefaultTextStyle(
+                    style: TextStyle(fontSize: 16),
+                    child: Row(
+                      children: [
+                        Text(
+                          '2 Questions',
+                        ),
+                        Spacer(),
+                        Text(
+                          '1',
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            //Button 1
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (c) => Home(),
+                  ),
+                );
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(5)),
+                height: 40,
+                width: 240,
+                child: Center(
+                    child: Text(
+                  'Next Quiz',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500),
+                )),
+              ),
+            ),
+            SizedBox(
+              height: 22,
+            ),
+            //Button 2
+
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (c) => Home(),
+                    ),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Color.fromRGBO(133, 251, 148, 1),
+                      borderRadius: BorderRadius.circular(5)),
+                  height: 40,
+                  width: 240,
+                  child: Row(
+                    children: [
+                      Spacer(),
+                      Text(
+                        'Share',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      Icon(
+                        Icons.share,
+                        color: Colors.black,
+                        size: 17,
+                      ),
+                      Spacer()
+                    ],
+                  ),
+                ))
           ],
         ),
       ),
