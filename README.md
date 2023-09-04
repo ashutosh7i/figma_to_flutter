@@ -5,6 +5,6 @@ slc quiz app is a task of fluter project building sprint at Datacode.in communit
 ## progress-
 
 1. Onboarding & Create Account (Sign up) ✅
-2. Home & Quiz (page- ✅,☑️,☑️,☑️)
+2. Home & Quiz (page- ✅,✅,✅,☑️)
 3. Feedback Page ✅
 4. Organizer Panel ✅
